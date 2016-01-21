@@ -89,6 +89,7 @@ public class DatabaseAnalyseServiceImpl implements DatabaseAnalyseService {
 					currentIndex.add(leafMap);
 				}
 			}
+			connection.close();
 		} catch (SQLException e) {
 			LOGGER.error(e.getMessage(), e);
 			throw new Exception("Impossible d'obtenir l'analyse des tables et index", e.getCause());
